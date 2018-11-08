@@ -1,0 +1,32 @@
+{
+  "devDependencies": {
+    "@types/fs-extra": "^5.0.4",
+    "@types/jasmine": "^2.8.9",
+    "@types/node": "^10.10.0",
+    "eslint": "^5.6.0",
+    "fs-extra": "^7.0.1",
+    "jasmine": "^3.2.0",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3",
+    "typescript-eslint-parser": "^18.0.0"
+  },
+  "scripts": {
+    "build": "tsc src/build",
+    "test": "ts-node node_modules/jasmine/bin/jasmine"
+  },
+  "name": "split-a-long-file",
+  "description": "split a long file into different modules based on given rules",
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Terry-Su/split-a-long-file.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Terry-Su/split-a-long-file/issues"
+  },
+  "homepage": "https://github.com/Terry-Su/split-a-long-file#readme"
+}
