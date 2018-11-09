@@ -11,6 +11,6 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "lib": [ "es2016", "dom" ],
-    "outFile": "build/build.js"
+    "outDir": "build"
   }
 }

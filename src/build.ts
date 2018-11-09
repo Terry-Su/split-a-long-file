@@ -1,6 +1,7 @@
 import { Rule } from "./__typings__/index.spec"
 import * as FS from "fs-extra"
 import * as PATH from "path"
+import { MATCH, INSERT } from "./constant/type"
 
 function matchText( start: string, end: string, sourceText: string ) {
   let res = ''
@@ -19,9 +20,15 @@ function matchText( start: string, end: string, sourceText: string ) {
 export default function( input: string, outputDir: string, rules: Rule[] ) {
   const sourceText = FS.readFileSync( input, { encoding: "utf8" } )
   function resolveRule( rule: Rule ) {
-    const { start, end, file, before = '', after = '' } = rule
-    const matchedText = matchText( start, end, sourceText )
-    const outputingText = `${ before }${ matchedText }${ after }`
+    const { start, end, file, before = '', after = '', type = MATCH, inserted = '' } = rule
+    let outputingText
+    if ( type === MATCH ) {
+      const matchedText = matchText( start, end, sourceText )
+      outputingText = `${ before }${ matchedText }${ after }`
+    }
+    if ( type === INSERT ) {
+      outputingText = `${ before }${ inserted }${ after }`
+    }
 
     const outputPath = PATH.resolve( outputDir, file )
     FS.outputFileSync( outputPath, outputingText )
