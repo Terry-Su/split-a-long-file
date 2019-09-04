@@ -11,7 +11,7 @@
     "typescript-eslint-parser": "^18.0.0"
   },
   "scripts": {
-    "build": "tsc --project tsconfig.json",
+    "build": "tsc --project tsconfig.build.json",
     "test": "ts-node node_modules/jasmine/bin/jasmine"
   },
   "name": "split-a-long-file",

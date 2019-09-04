@@ -1,0 +1,16 @@
+{
+  "include": [
+    "src/build.ts"
+  ],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "module": "commonjs",
+		"target": "es5",
+    "allowJs": true,
+    // "sourceMap": true,
+    // "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "lib": [ "es2016", "dom" ],
+    "outDir": "build"
+  }
+}
